@@ -1,0 +1,92 @@
+
+body {
+    background-color: #1D1E22;
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    user-select: none;
+}
+
+.split{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 6em;
+    color: transparent;
+    text-transform: uppercase;
+    transform: translate(-50%,-50%);
+}
+
+.split span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFF;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    overflow: hidden;
+}
+.split:hover span :nth-child(1){
+    transform: translateY(-36px);
+}
+
+.split span:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFF;
+    transition: 0.5s;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    overflow: hidden;
+}
+.split:hover span :nth-child(2){
+    transform: translateY(36px);
+}
+
+.split span:nth-child(3){
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scaleY(0);
+    width: 95%;
+    color: #000;
+    background: #0cb2ff;
+    font-size: 0.17em;
+    font-weight: bold;
+    letter-spacing: 0.7em;
+    text-align: center;
+    padding-left: 20px;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+.split:hover span:nth-child(3){
+    transform: translateY(-50%) scaleY(1);
+}
+
+
+.social{
+    position: absolute;
+    display: flex;
+    max-width: 10px;
+    height: 10px;
+    top: 75%;
+    left: 50%;
+    justify-content: center;
+    filter: drop-shadow(2px 4px 5px #FFF);
+}
+
+.social a{
+    margin: 10px;
+    padding: 10px;
+}
+
+.foto{
+    position: absolute;
+    display: flex;
+    top: 18%;
+    left: 37.5%;
+    justify-content: center;
+    border-radius: 20% 0% 20% 0;
+}
