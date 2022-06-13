@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    background-color: darkgrey;
+}
+.card{
+    position: absolute;
+    display: flexbox;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 25%;
+    left: 38%;
+    width: 25em;
+    height: 25em;
+    color: #1a3896;
+    background: url('./img/images.jpg') center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card_content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #FFF;
+    border-top-left-radius: 20px;
+    transform: translateY(70px);
+    transition: transform .25s;
+}
+.card_content::before{
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #FFF;
+}
+.card_title{
+    color: #6A5155;
+    line-height: 15px;
+    text-align: center;
+}
+.card_subtitle{
+    text-align: center;
+    color: #6b2c37;
+    line-height: 15px;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.card_description{
+    text-align: center;
+    color: #6b2c37;
+    line-height: 15px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.card:hover .card_content{
+    transform: translateY(0);
+}
+.card:hover .card_subtitle{
+    opacity: 1;
+    transition-delay: .25s;
+}
+.card:hover .card_description{
+    opacity: 1;
+    transition-delay: .25s;
+}
