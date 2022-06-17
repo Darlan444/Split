@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #706f6f;
+}
+
+.form{
+    top: 50%;
+    left: 50%;
+}
